@@ -14,6 +14,4 @@
         @include('frontend.homepage.popular', ['title' => 'Popular Sales', 'products' => $products])
         @include('frontend.homepage.blogsection', ['title' => 'Blogs', 'blogs' => $blogs])
     </section>
-
-
 @endsection

@@ -1,7 +1,7 @@
 <section class="px-20 py-10 max-sm:text-center  w-full mx-auto max-w-screen-2xl">
     <div class="flex gap-8 max-lg:flex-col  ">
         <div class="w-[30%] max-lg:w-full">
-            <a href="/" class="max-sm:justify-center max-sm:flex"><img src="{{ asset('images/investlogo.jpg') }}" alt="logo" class="w-24 "></a>
+            <a href="/" class="max-sm:justify-center max-sm:flex"><img src="{{ asset('images/investlogo.png') }}" alt="logo" class="w-24 "></a>
             <div class=" text-gray-500 py-3">"Invest For Nepal!"</div>
             <div class="flex gap-5 max-sm:justify-center">
                 <i class="fa-brands fa-facebook text-2xl text-[#0f577d]"></i>

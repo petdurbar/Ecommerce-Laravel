@@ -52,7 +52,7 @@
     <nav class="flex justify-between  text-slate-500 px-4">
         <div class="xl:px-12 px-4 py-2 flex items-center ">
             <a class="text-3xl font-bold border-gray-600 font-heading w-24" href="{{route("homepage")}}">
-                <img src="{{ asset('images/investlogo.jpg') }}" />
+                <img src="{{ asset('images/investlogo.png') }}" />
             </a>
         </div>
 

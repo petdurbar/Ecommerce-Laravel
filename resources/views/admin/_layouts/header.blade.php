@@ -10,7 +10,7 @@
         </div>
         <div class=" md:col-span-1 lg:col-span-2">
             <div class="flex items-center w-16">
-                <img class="oldimage" src="{{ asset('images/investlogo.jpg') }}" alt="banner_image">
+                <img class="oldimage" src="{{ asset('images/investlogo.png') }}" alt="banner_image">
                 {{-- <span class="mx-2 text-xl text-slate-600 font-semibold ">InvestForNepal</span> --}}
             </div>
         </div>

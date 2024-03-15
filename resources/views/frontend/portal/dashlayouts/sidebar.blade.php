@@ -12,11 +12,11 @@
         id="sidenav">
         <div class="flex justify-center items-center w-full px-4 pt-4 pb-4 border-b border-gray-300">
             <div class="logoimage">
-                <img class="oldimage" src="{{ asset('images/investlogo.jpg') }}"alt="banner_image">
+                <img class="oldimage" src="{{ asset('images/investlogo.png') }}"alt="banner_image">
             </div>
         </div>
         {{-- <div class="flex  items-center w-full px-4 pt-4 pb-4 border-b border-gray-300">
-            <img class="oldimage" src="{{ asset('images/investlogo.jpg') }}" alt="banner_image">
+            <img class="oldimage" src="{{ asset('images/investlogo.png') }}" alt="banner_image">
         </div> --}}
         <div class="pb-6 mt-4 overflow-x-hidden overflow-y-auto">
             <ul class="mb-8 text-sm">

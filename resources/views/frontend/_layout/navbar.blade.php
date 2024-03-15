@@ -23,7 +23,7 @@
 
     <div class="flex  py-3 justify-between  items-center ">
         <div class="flex gap-5 max-lg:gap-2">
-            <a href="{{ route('homepage') }}"><img src="{{ asset('images/investlogo.jpg') }}" alt="logo"
+            <a href="{{ route('homepage') }}"><img src="{{ asset('images/investlogo.png') }}" alt="logo"
                     class="w-24 "></a>
         </div>
 

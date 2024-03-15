@@ -217,9 +217,9 @@
                                             <img class="thumbnail aspect-square"
                                                 src="{{ asset('uploads/' . $img->images) }}">
                                         </a>
-                                        {{-- <a href="{{ asset('images/investlogo.jpg') }}" data-fancybox="gallery" data-rotation="0"
+                                        {{-- <a href="{{ asset('images/investlogo.png') }}" data-fancybox="gallery" data-rotation="0"
                                     target="_blank">
-                                    <img class="thumbnail aspect-square" src="{{ asset('images/investlogo.jpg') }}">
+                                    <img class="thumbnail aspect-square" src="{{ asset('images/investlogo.png') }}">
                                 </a> --}}
                                     @endforeach
                                 </div>
