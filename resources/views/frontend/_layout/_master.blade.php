@@ -21,7 +21,6 @@
         <meta name="og:title" content="{{ $meta->title }}" />
         <meta name="og:description" content="{{ Str::limit(strip_tags($meta->description, 50)) }}" />
         <meta property="og:image" content="{{ 'https://investfornepal.com/public/uploads/' . $meta->featured_image }}" />
-
         <meta name="title" content="{{ $meta->title }}" />
         <meta name="description" content="{{ Str::limit(strip_tags($meta->description, 50)) }}" />
         <meta property="twitter:url" content="{{ 'https://investfornepal.com/' }}" />
@@ -40,12 +39,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="{{ asset('uploads/favicon.ico') }}">
-    @vite('resources/css/app.css')
-
-
     {{-- <title>Investfornepal</title> --}}
     {{-- toastr --}}
-
     <style>
         .mylist ol li {
             display: block;
@@ -286,9 +281,10 @@
 
 </head>
 {{-- @dd(getPhoneNumber()) --}}
+
 <body>
     <div class=" w-14 z-[999] fixed bottom-0 right-0  m-5">
-        <a href="https://wa.me/{{getPhoneNumber()}}" target="_blank">
+        <a href="https://wa.me/{{ getPhoneNumber() }}" target="_blank">
             @include('frontend._layout.whatsapp')
         </a>
     </div>
