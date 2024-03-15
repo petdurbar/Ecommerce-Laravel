@@ -1,0 +1,5 @@
+# Ignore SQLite database files
+*.sqlite
+
+# Ignore GitHub Actions workflows
+.github/workflows/
