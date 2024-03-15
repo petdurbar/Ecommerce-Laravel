@@ -75,17 +75,4 @@
 
 
     </div>
-    <div class="flex justify-between flex-wrap max-sm:justify-center pt-11">
-
-        <p class="text-sm text-gray-600">© {{ now()->year }}. Pet Durbar. All rights reserved.</p>
-        <div class="flex  justify-center flex-wrap max-sm:mt-4">
-            <a href="https://softsaro.com" target="_blank">
-                <p class="text-sm text-gray-500">
-                    Powered by <span class="hover:text-purple-800 font-bold">Softsaro Nepal.</span>
-                </p>
-            </a>
-            <img class="h-6 ml-2  w-auto" src="{{ asset('/images/nepal_flag.gif') }}" alt="Company" />
-        </div>
-    </div>
-
 </section>
