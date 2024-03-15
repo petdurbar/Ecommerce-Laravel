@@ -2,7 +2,7 @@
     <div class="flex gap-8 max-lg:flex-col  ">
         <div class="w-[30%] max-lg:w-full">
             <a href="/" class="max-sm:justify-center max-sm:flex"><img src="{{ asset('images/investlogo.png') }}" alt="logo" class="w-24 "></a>
-            <div class=" text-gray-500 py-3">"Invest For Nepal!"</div>
+            <div class=" text-gray-500 py-3">"Pet Durbar!"</div>
             <div class="flex gap-5 max-sm:justify-center">
                 <i class="fa-brands fa-facebook text-2xl text-[#0f577d]"></i>
                 <i class="fa-brands fa-instagram text-2xl text-[#0f577d]"></i>
@@ -68,7 +68,7 @@
     </div>
     <div class="flex justify-between flex-wrap max-sm:justify-center pt-11">
 
-        <p class="text-sm text-gray-600">© {{ now()->year }}. Invest For Nepal. All rights reserved.</p>
+        <p class="text-sm text-gray-600">© {{ now()->year }}. Pet Durbar. All rights reserved.</p>
         <div class="flex  justify-center flex-wrap max-sm:mt-4">
             <a href="https://softsaro.com" target="_blank">
                 <p class="text-sm text-gray-500">
