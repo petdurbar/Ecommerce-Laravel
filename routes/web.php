@@ -48,7 +48,7 @@ Route::get('/product/{product:slug}', [HomeController::class, 'singlepage'])->na
 Route::get('cart', [CartController::class, 'cart'])->name('cart');
 
 Route::get('/migrate', function () {
-    Artisan::call('migrate:fresh');
+    Artisan::call('migrate:fresh --seed');
     return redirect()->route("homepage")->with('success', 'Migrate Successfull');
 });
 // Route::get('cart/count', [HomeController::class, 'cartcount'])->name('cartcount');

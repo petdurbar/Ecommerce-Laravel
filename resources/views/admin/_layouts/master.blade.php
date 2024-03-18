@@ -19,7 +19,7 @@
         <meta name="description" content="{{ $page->description }}">
 
         <title>{{ $page->title }}</title> --}}
-    <title>Admin</title>
+    <title>Admin PetDurbar</title>
     <script src="{{ asset('js/main.js') }}" defer></script>
 
     <link rel="stylesheet" href="{{ asset('css/main.js') }}">
