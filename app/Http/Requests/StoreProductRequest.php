@@ -23,21 +23,13 @@ class StoreProductRequest extends FormRequest
     {
         return [
             'product_name' => 'required|unique:softsaro__products,product_name',
-            // 'featured' => 'required',
             'featured_image' => 'required',
             'category' => 'required',
             'product_order' => 'numeric',
-
             'product_price' => 'required|numeric',
             'cutoff_price' => 'numeric',
-
             'cost_price' => 'required|numeric',
             'product_stock' => 'required|numeric',
-            'margin' => 'required|numeric',
-            // 'referal_commission_percentage' => 'required|numeric',
-            'affiliate_commission_percentage' => 'nullable|numeric',
-            'incentive_commission_percentage' => 'required|numeric',
-            // 'referal_commission_amount' => 'required|numeric',
             'mrp_price' => 'required|numeric',
             'description' => 'required',
         ];

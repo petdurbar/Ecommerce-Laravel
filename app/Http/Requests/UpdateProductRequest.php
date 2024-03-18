@@ -27,17 +27,8 @@ class UpdateProductRequest extends FormRequest
             'product_price' => 'required|numeric',
             'product_stock' => 'required|numeric',
             'cost_price' => 'required|numeric',
-            // 'cutoff_price' => 'numeric',
             'product_order' => 'numeric',
-            // 'referal_commission_percentage' => 'required|numeric',
-            'affiliate_commission_percentage' => 'nullable|numeric',
-            'incentive_commission_percentage' => 'required|numeric',
-            // 'referal_commission_amount' => 'required|numeric',
-            // 'margin'=> 'required|numeric',
-            // 'commission_result'=> 'required|numeric',
             'mrp_price' => 'required|numeric',
-
-
         ];
     }
 }
