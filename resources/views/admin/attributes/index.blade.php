@@ -10,7 +10,7 @@
             <div class="flex justify-between my-5 ">
 
                 <p class="mb-2 text-lg font-bold">Attribute </p>
-                <a class="bg-[#0f577d] text-white h-10 p-2 text-sm flex gap-2 items-center font-main rounded-lg"
+                <a class="bg-orange-500 text-white h-10 p-2 text-sm flex gap-2 items-center font-main rounded-lg"
                     href="{{ route('attributes.create') }}">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus pt-1 " width="20"
                         height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -27,7 +27,7 @@
                 method="POST">
                 @csrf
                 <label for="status" class="text-md font-semibold">Filter by Attribute Group : </label>
-                <select id="attribute-select" name="groupid" class="rounded-lg bg-[#0f577d] p-1 px-3 text-white">
+                <select id="attribute-select" name="groupid" class="rounded-lg bg-orange-500 p-1 px-3 text-white">
                     <option value="0">All</option>
                     @foreach ($attributeGroups as $attributeGroup)
                         <option value="{{ $attributeGroup->id }}"

@@ -52,9 +52,6 @@
             </form>
 
 
-            {{-- <input type="text" id="searchInput"
-                class="w-full py-3 border border-[#4098c7] px-5 rounded-md text-sm outline-none"
-                placeholder="Search Products...."> --}}
 
             <ul id="results" class="mt-2 border rounded-md bg-white shadow-lg">
                 <div class="relative text-gray-600 text-sm">
@@ -63,7 +60,7 @@
                     </ul>
 
                 </div>
-                <div class="absolute top-2 right-3 font-bold text-[#0f577d]">
+                <div class="absolute top-2 right-3 font-bold text-[#000]">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24"
                         height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -76,7 +73,7 @@
 
 
 
-        <div class="flex gap-10 max-sm:gap-3 max-md:gap-8 text-[#0f577d]">
+        <div class="flex gap-10 max-sm:gap-3 max-md:gap-8 text-[#000]">
             <a href="{{ route('wishlist') }}">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -93,7 +90,7 @@
                         d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
                 </svg>
 
-                <div class="absolute top-0 right-0 bg-[#0f577d] rounded-full text-xs text-white px-1">1</div>
+                <div class="absolute top-0 right-0 bg-orange-500 rounded-full text-xs text-white px-1">1</div>
             </div> --}}
 
             {{-- @if (Auth::guard('customers')->user())
@@ -196,7 +193,7 @@
                     @else
                         <div class="py-1 border-b" role="none">
                             <a href="{{ route('register') }}"
-                                class="{{ request()->segment(1) == 'register' ? 'active flex px-4 py-2 text-sm font-medium border-l-2 border-transparent  rounded-tl-md hover:border-blue-500 hover:text-blue-500 text-[#0f577d] underline' : 'flex px-4 py-2 text-sm font-medium border-l-2 border-transparent  rounded-tl-md hover:border-blue-500 hover:text-blue-500 text-[#0f577d]' }}">
+                                class="{{ request()->segment(1) == 'register' ? 'active flex px-4 py-2 text-sm font-medium border-l-2 border-transparent  rounded-tl-md hover:border-blue-500 hover:text-blue-500 text-[#000] underline' : 'flex px-4 py-2 text-sm font-medium border-l-2 border-transparent  rounded-tl-md hover:border-blue-500 hover:text-blue-500 text-[#000]' }}">
                                 <span class="mr-2">
 
                                 </span>Register</a>
@@ -205,7 +202,7 @@
 
                         <div class="py-1" role="none">
                             <a href="{{ route('login') }}"
-                                class="{{ request()->segment(1) == 'login' ? 'active flex px-4 py-2 text-sm font-medium border-l-2 border-transparent  rounded-bl-md hover:border-blue-500 hover:text-blue-500 text-[#0f577d]  underline' : 'flex px-4 py-2 text-sm font-medium border-l-2 border-transparent  rounded-bl-md hover:border-blue-500 hover:text-blue-500 text-[#0f577d] ' }} ">
+                                class="{{ request()->segment(1) == 'login' ? 'active flex px-4 py-2 text-sm font-medium border-l-2 border-transparent  rounded-bl-md hover:border-blue-500 hover:text-blue-500 text-[#000]  underline' : 'flex px-4 py-2 text-sm font-medium border-l-2 border-transparent  rounded-bl-md hover:border-blue-500 hover:text-blue-500 text-[#000] ' }} ">
                                 <span class="mr-2">
 
                                 </span>Login</a>
@@ -229,22 +226,22 @@
                 </svg>
 
                 <div
-                    class="absolute border text-[#0f577d] hidden  group-hover:block bg-white shadow-md rounded-md mt-1 py-1  right-0">
+                    class="absolute border text-[#000] hidden  group-hover:block bg-white shadow-md rounded-md mt-1 py-1  right-0">
                     <div>
                         @if (Auth::guard('softsaro__users')->user())
                             <form action="{{ route('front.logout') }}" method="POST">
                                 @csrf
-                                <button class="block px-4 py-2 text-sm hover:text-[#0f577d] hover:underline">
+                                <button class="block px-4 py-2 text-sm hover:text-[#000] hover:underline">
                                     Logout
                                 </button>
                             </form>
                         @else
                             <a href="{{ route('register') }}"
-                                class="block px-4 py-2 text-sm hover:text-[#0f577d] hover:underline">
+                                class="block px-4 py-2 text-sm hover:text-[#000] hover:underline">
                                 Register
                             </a>
                             <a href="{{ route('login') }}"
-                                class="block px-4 py-2 text-sm hover:text-[#0f577d] hover:underline">
+                                class="block px-4 py-2 text-sm hover:text-[#000] hover:underline">
                                 Login
                             </a>
                         @endif
@@ -269,12 +266,12 @@
                 </a>
 
                 <div id="cartCount"
-                    class="absolute cart-count  bottom-5 left-3.5 bg-[#0f577d] rounded-full text-xs text-white px-1">
+                    class="absolute cart-count  bottom-5 left-3.5 bg-orange-500 rounded-full text-xs text-white px-1">
                     {{ totalCartQuantity() }}
                 </div>
 
                 {{-- @if (cartItemCounter() > 0)
-                    <div class="absolute top-0 right-0 bg-[#0f577d] rounded-full text-xs text-white px-1">
+                    <div class="absolute top-0 right-0 bg-orange-500 rounded-full text-xs text-white px-1">
                         {{ cartItemCounter() }}</div>
                 @endif --}}
 
@@ -292,7 +289,7 @@
                         <path d="M6 5l14 1l-1 7h-13"></path>
                     </svg>
                 </a>
-                <div class="absolute top-0 right-0 bg-[#0f577d] rounded-full text-xs text-white px-1">1</div>
+                <div class="absolute top-0 right-0 bg-orange-500 rounded-full text-xs text-white px-1">1</div>
 
                 cart ({{\Gloudemans\Shoppingcart\Facades\Cart::content()->count()}})
 
@@ -300,17 +297,6 @@
         </div>
 
     </div>
-
-    {{-- <div class="  pb-5 relative max-lg:block hidden">
-        <input type="text" class="w-full py-3 px-5  text-sm border border-gray-800  rounded-md outline-none"
-            placeholder="Search Products....">
-
-        <div class="absolute top-2 right-3 font-bold text-[#0f577d]">
-            <span class="material-symbols-outlined">
-                search
-            </span>
-        </div>
-    </div> --}}
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

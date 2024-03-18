@@ -1,7 +1,7 @@
 @extends('admin._layouts.master')
 
 @section('page_title', 'Category')
-@section('category_select', 'bg-[#0f577d] text-white')
+@section('category_select', 'bg-orange-500 text-white')
 @section('body')
     <div class="px-5 bg-background w-full">
         @include('admin.message.index')
@@ -11,7 +11,7 @@
 
                 <div class='flex '>
                     <a href='{{ route('category.create', ['category' => request('category')]) }}'
-                        class='bg-[#0f577d] text-white h-10 p-2 text-sm flex gap-2 items-center font-main rounded-lg'>
+                        class='bg-orange-500 text-white h-10 p-2 text-sm flex gap-2 items-center font-main rounded-lg'>
                         <svg xmlns="http://www.w3.org/2000/svg" class="svgicon" height="1em" viewBox="0 0 448 512">
                             <style>
                                 .svgicon {
@@ -25,7 +25,7 @@
                         <span>Add SubCategory</span>
                     </a>
                     {{-- <a href='{{ route('category.create') }}'
-                        class='bg-[#0f577d] text-white h-10 p-2 text-sm flex gap-2 items-center font-main rounded-lg'>
+                        class='bg-orange-500 text-white h-10 p-2 text-sm flex gap-2 items-center font-main rounded-lg'>
                         <svg xmlns="http://www.w3.org/2000/svg" class="svgicon" height="1em" viewBox="0 0 448 512">
                             <style>
                                 .svgicon {
@@ -43,7 +43,7 @@
                 <div class="text-2xl font-bold">Categories</div>
                 <div class='flex'>
                     <a href='{{ route('category.create') }}'
-                        class='bg-[#0f577d] text-white h-10 p-2 text-sm flex gap-2 items-center font-main rounded-lg'>
+                        class='bg-orange-500 text-white h-10 p-2 text-sm flex gap-2 items-center font-main rounded-lg'>
                         <svg xmlns="http://www.w3.org/2000/svg" class="svgicon" height="1em" viewBox="0 0 448 512">
                             <style>
                                 .svgicon {

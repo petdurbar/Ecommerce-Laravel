@@ -99,7 +99,7 @@
                     <input type="hidden" name="parent_id" value="{{ request('category' ?? 0) }}">
                     <div class="flex justify-end">
                         <button
-                            class="border mt-3 border-[#0f577d] px-4 py-1 rounded-md mr-2 text-[#0f577d] bg-white hover:bg-[#0f577d] hover:text-white">
+                            class="border mt-3 border-[#0f577d] px-4 py-1 rounded-md mr-2 text-[#000] bg-white hover:bg-orange-500 hover:text-white">
                             Submit
                         </button>
                     </div>

@@ -1,21 +1,12 @@
-<div class="bg-[#328dbe] ">
-    {{-- <div class="bg-[#0f577d] "> --}}
-    {{-- 28678a --}}
+<div class="bg-orange-500">
     <nav class="flex justify-between mx-auto max-w-screen-2xl text-white item px-4">
         <div class=" py-2 flex w-full justify-center  items-center ">
-
-
-
             <div class="relative max-md:block hidden w-3/4  p-1">
-
-
-
-
                 <form action="{{ route('productsearch') }}" method="GET" class="-m-1">
                     <div class="flex">
                         <div class="relative w-full">
                             <input type="text" id="mbsearch" name="search-term"
-                                class="w-full py-3 px-5 text-gray-600 text-sm border border-gray-800  rounded-md outline-none"
+                                class="w-full py-3 px-5 text-gray-600 text-sm border border-gray-200  rounded-md outline-none"
                                 placeholder="Search for product" required>
                             <button type="submit" class="absolute top-3.5 right-3 text-black">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search"
@@ -37,7 +28,7 @@
 
 
             <div id="mobileNavLinks"
-                class="hidden max-md:absolute md:flex mx-auto font-semibold font-heading space-x-12 max-md:space-x-0 max-md:space-y-2.5 max-md:py-3 max-md:text-center max-md:top-[163px]  left-0 max-md:w-full md:justify-center max-md:bg-[#328dbe] text-white ">
+                class="hidden max-md:absolute md:flex mx-auto font-semibold font-heading space-x-12 max-md:space-x-0 max-md:space-y-2.5 max-md:py-3 max-md:text-center max-md:top-[163px]  left-0 max-md:w-full md:justify-center max-md:bg-orange-500 text-white ">
                 <div><a class="{{ request()->segment(1) == '' ? 'active hover:underline underline hover:text-gray-100  px-3 text-md font-medium mr-3 flex-1 item' : 'text-white px-3 text-md font-medium hover:underline hover:text-gray-100' }}"
                         href="{{ route('homepage') }}">Home</a></div>
 

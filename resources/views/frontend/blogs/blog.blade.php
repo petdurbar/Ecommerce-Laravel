@@ -26,7 +26,7 @@
     </div> --}}
     <div class="mx-auto max-w-screen-2xl">
         <form action="{{ route('searchblog') }}" method="GET" class="flex justify-between flex-wrap mt-3 ">
-            <div class="text-2xl text-[#0f577d]">
+            <div class="text-2xl text-[#000]">
                 {{ $title }}
             </div>
             <div class="flex gap-2 mt-2">
@@ -36,7 +36,7 @@
                         name="searchterm" placeholder="search" type="text" value="{{ old('searchterm', $searchterm) }}" />
                 </div>
                 <button type="submit"
-                    class="border  border-[#0f577d] px-4 py-1 rounded-md mr-2 text-[#0f577d] bg-white hover:bg-[#0f577d] hover:text-white">
+                    class="border  border-[#0f577d] px-4 py-1 rounded-md mr-2 text-[#000] bg-white hover:bg-orange-500 hover:text-white">
 
                     <div>Search</div>
                 </button>
@@ -55,7 +55,7 @@
 
 
             @if ($message == 'No blogs found')
-                <div class="text-center text-[#0f577d] mt-10 underline">
+                <div class="text-center text-[#000] mt-10 underline">
 
                     {{ $message }}
                 </div>

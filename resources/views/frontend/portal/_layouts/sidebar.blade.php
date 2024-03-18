@@ -5,7 +5,7 @@
                 :class="{ 'hover:bg-gray-300': !sidebarOpen, 'hover:bg-gray-700': sidebarOpen }"
                 class="transition-all duration-300 w-8 p-1 mx-3 my-2 rounded-full focus:outline-none">
                 <svg viewBox="0 0 20 20" class="w-6 h-6 fill-current"
-                    :class="{ 'text-[#0f577d]': !sidebarOpen, 'text-red-500 hover:text-white': sidebarOpen }">
+                    :class="{ 'text-[#000]': !sidebarOpen, 'text-red-500 hover:text-white': sidebarOpen }">
                     <path x-show="!sidebarOpen" fill-rule="evenodd"
                         d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
                         clip-rule="evenodd"></path>
@@ -18,12 +18,12 @@
     </div>
 
     <div x-cloak wire:ignore :class="{ 'w-56': sidebarOpen, 'w-0': !sidebarOpen }"
-        class="fixed left-0 z-30 block w-56 h-full min-h-screen  font-semibold transition-all duration-300 ease-in-out  text-[#0f577d] shadow-lg overflow-x-hidden">
+        class="fixed left-0 z-30 block w-56 h-full min-h-screen  font-semibold transition-all duration-300 ease-in-out  text-[#000] shadow-lg overflow-x-hidden">
 
         <div class="flex flex-col items-stretch justify-between overflow-y-scroll h-[90vh]">
             <div class="flex flex-col flex-shrink-0 w-full">
                 <div class="flex items-center justify-center px-8 py-3 text-center">
-                    <a href="#" class="text-lg leading-normal text-[#0f577d] font-bold ">
+                    <a href="#" class="text-lg leading-normal text-[#000] font-bold ">
                         {{ Auth::guard('softsaro__users')->user()->name }}
                     </a>
                 </div>
@@ -31,7 +31,7 @@
                 <nav class="">
                     <div class="flex-grow md:block md:overflow-y-auto overflow-x-hidden"
                         :class="{ 'opacity-1': sidebarOpen, 'opacity-0': !sidebarOpen }">
-                        <a class="{!! request()->segment(2) == 'dashboard' ? 'bg-[#0f577d] text-white' : 'text-[#0f577d] bg-transparent' !!} flex justify-start items-center px-4 py-3 hover:bg-[#0f577d] hover:text-white"
+                        <a class="{!! request()->segment(2) == 'dashboard' ? 'bg-orange-500 text-white' : 'text-[#000] bg-transparent' !!} flex justify-start items-center px-4 py-3 hover:bg-orange-500 hover:text-white"
                             href="{{ route('portal.dashboard') }}">
 
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -44,7 +44,7 @@
                             <span class="mx-4">Dashboard</span>
                         </a>
 
-                        <a class="{!! request()->segment(2) == 'order-history' ? 'bg-[#0f577d] text-white' : 'text-[#0f577d] bg-transparent' !!} flex mt-1 items-center px-4 py-3 hover:bg-[#0f577d] hover:text-white "
+                        <a class="{!! request()->segment(2) == 'order-history' ? 'bg-orange-500 text-white' : 'text-[#000] bg-transparent' !!} flex mt-1 items-center px-4 py-3 hover:bg-orange-500 hover:text-white "
                             href="{{ route('user.history') }}">
                             <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"
                                 viewBox="0 0 24 24">
@@ -54,7 +54,7 @@
                             <span class="mx-4">Orders History</span>
                         </a>
 
-                        <a class="{!! request()->segment(2) == 'profile' ? 'bg-[#0f577d] text-white' : 'text-[#0f577d] bg-transparent' !!} flex mt-1 items-center px-4 py-3 hover:bg-[#0f577d] hover:text-white  "
+                        <a class="{!! request()->segment(2) == 'profile' ? 'bg-orange-500 text-white' : 'text-[#000] bg-transparent' !!} flex mt-1 items-center px-4 py-3 hover:bg-orange-500 hover:text-white  "
                             href="{{ route('user.profile') }}">
                             <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"
                                 viewBox="0 0 24 24">
@@ -64,7 +64,7 @@
                             <span class="mx-4">Profile</span>
                         </a>
 
-                        <a class="{!! request()->segment(2) == 'change-password' ? 'bg-[#0f577d] text-white' : 'text-[#0f577d] bg-transparent' !!} flex mt-1 items-center px-4 py-3 hover:bg-[#0f577d] hover:text-white   "
+                        <a class="{!! request()->segment(2) == 'change-password' ? 'bg-orange-500 text-white' : 'text-[#000] bg-transparent' !!} flex mt-1 items-center px-4 py-3 hover:bg-orange-500 hover:text-white   "
                             href="{{ route('user.passwordChange') }}">
                             <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"
                                 viewBox="0 0 24 24">
@@ -75,8 +75,8 @@
                         </a>
 
                         <a class="{!! request()->segment(2) == 'transaction-statements'
-                            ? 'bg-[#0f577d] text-white'
-                            : 'text-[#0f577d] bg-transparent' !!} flex mt-1 items-center px-4 py-3 hover:bg-[#0f577d] hover:text-white   "
+                            ? 'bg-orange-500 text-white'
+                            : 'text-[#000] bg-transparent' !!} flex mt-1 items-center px-4 py-3 hover:bg-orange-500 hover:text-white   "
                             href="{{ route('user.statements') }}">
                             <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"
                                 viewBox="0 0 24 24">
@@ -86,7 +86,7 @@
                             <span class="mx-4">Payment Statements</span>
                         </a>
 
-                        <a class="{!! request()->segment(1) == 'track-order' ? 'bg-[#0f577d] text-white' : 'text-[#0f577d] bg-transparent' !!} flex mt-1 items-center px-4 py-3 hover:bg-[#0f577d] hover:text-white   "
+                        <a class="{!! request()->segment(1) == 'track-order' ? 'bg-orange-500 text-white' : 'text-[#000] bg-transparent' !!} flex mt-1 items-center px-4 py-3 hover:bg-orange-500 hover:text-white   "
                             href="{{ route('user.tracker') }}">
                             <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"
                                 viewBox="0 0 24 24">
@@ -98,7 +98,7 @@
 
                         @if (Auth::guard('softsaro__users')->user()->is_affilate == '1' &&
                                 Auth::guard('softsaro__users')->user()->status == 'VERIFIED')
-                            <a class="{!! request()->segment(2) == 'payment-history' ? 'bg-[#0f577d] text-white' : 'text-[#0f577d] bg-transparent' !!} flex mt-1 items-center px-4 py-3 hover:bg-[#0f577d] hover:text-white   "
+                            <a class="{!! request()->segment(2) == 'payment-history' ? 'bg-orange-500 text-white' : 'text-[#000] bg-transparent' !!} flex mt-1 items-center px-4 py-3 hover:bg-orange-500 hover:text-white   "
                                 href="{{ route('payment.history') }}">
                                 <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"
                                     viewBox="0 0 24 24">

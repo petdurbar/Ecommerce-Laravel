@@ -217,11 +217,11 @@
                         {{-- @if (Auth::guard('customers')->user()) --}}
                         {{-- <a href="{{ route('cart') }}"> --}}
 
-                        <button class="font-medium bg-[#0f577d] text-white py-2 px-3 rounded-md">ADD
+                        <button class="font-medium bg-orange-500 text-white py-2 px-3 rounded-md">ADD
                             TO
                             CART</button>
                         {{-- </a> --}}
-                        {{-- <button type="submit" class="font-medium bg-[#0f577d] text-white py-2 px-3 rounded-md">ADD
+                        {{-- <button type="submit" class="font-medium bg-orange-500 text-white py-2 px-3 rounded-md">ADD
                                 TO
                                 CART</button> --}}
                         {{-- @else
@@ -233,7 +233,7 @@
 
 
                         <a href="" class="tooltip">
-                            <div class="font-medium border bg-[#0f577d] text-white py-2 px-2 rounded-md">
+                            <div class="font-medium border bg-orange-500 text-white py-2 px-2 rounded-md">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="icon icon-tabler icon-tabler-heart-filled" width="24" height="24"
                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -517,7 +517,7 @@
 
         <div class="">
             <div class="text-xl text-[#89BA46] py-5 font-medium pb-5 flex gap-10">
-                <div class=" cursor-pointer text-[#0f577d]" id="description">Description</div>
+                <div class=" cursor-pointer text-[#000]" id="description">Description</div>
                 {{-- <div class="tab cursor-pointer" id="reviews">Reviews(0)</div> --}}
 
 

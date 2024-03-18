@@ -138,7 +138,7 @@
                 {{-- <a href="{{ route('category.create') }}"> --}}
                 <a href="{{ route('myimage', $product->id) }} ">
                     <div
-                        class="border float-right border-[#0f577d] px-4 py-2 rounded-md mr-2 text-[#0f577d] bg-white hover:bg-[#0f577d] hover:text-white">
+                        class="border float-right border-[#0f577d] px-4 py-2 rounded-md mr-2 text-[#000] bg-white hover:bg-orange-500 hover:text-white">
                         <div>Add More Images</div>
                     </div>
                 </a>

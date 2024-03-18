@@ -246,7 +246,7 @@
 
             <div class="col-span-6 sm:flex sm:items-center sm:gap-4 mt-5">
                 <button
-                    class="inline-block shrink-0 rounded-md border border-[#0f577d] bg-[#0f577d] px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#0f577d] focus:outline-none focus:ring active:text-blue-500">
+                    class="inline-block shrink-0 rounded-md border border-[#0f577d] bg-orange-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#000] focus:outline-none focus:ring active:text-blue-500">
                     Submit
                 </button>
             </div>

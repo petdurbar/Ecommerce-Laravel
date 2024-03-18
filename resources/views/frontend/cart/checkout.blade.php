@@ -88,7 +88,7 @@
         {{-- <div class="px-5">
 
             <div class="mb-2">
-                <h1 class="text-3xl md:text-3xl font-bold text-[#0f577d]">Checkout.</h1>
+                <h1 class="text-3xl md:text-3xl font-bold text-[#000]">Checkout.</h1>
             </div>
             <div class="mb-5 text-gray-400">
                 <a href="#" class="focus:outline-none hover:underline text-gray-500">Home</a> / <a href="#"
@@ -120,7 +120,7 @@
                             <div class=" md:w-7/12">
 
                                 <div class="mb-1 border-b border-gray-200 ">
-                                    <div class="flex flex-wrap w-full text-sm font-medium text-center text-[#0f577d]"
+                                    <div class="flex flex-wrap w-full text-sm font-medium text-center text-[#000]"
                                         id="tabExample" role="tablist">
 
                                         <span class="" role="paymentinfo">
@@ -146,7 +146,7 @@
                                 <div id="tabContentExample">
                                     <div class="hidden-items   p-2  rounded-lg " id="billing-button" role="tabpanel"
                                         aria-labelledby="billing_tab">
-                                        <div class="py-2 text-[#0f577d] font-semibold">
+                                        <div class="py-2 text-[#000] font-semibold">
                                             Billing Information
                                         </div>
                                         <div
@@ -209,7 +209,7 @@
 
                                     <div class="hidden-items p-2 rounded-lg  " id="shipping-button" role="tabpanel"
                                         aria-labelledby="shipping-tab">
-                                        <div class="py-2 text-[#0f577d] font-semibold">
+                                        <div class="py-2 text-[#000] font-semibold">
                                             Shipping Information
                                         </div>
                                         <div
@@ -443,7 +443,7 @@
                                                     @if($item->attributes->attr)
                                                     <div class=" flex gap-1 ">
                                                         @foreach ($item->attributes->attr as $key => $attri)
-                                                            <div class=" border bg-[#0f577d] text-white p-1 rounded">
+                                                            <div class=" border bg-orange-500 text-white p-1 rounded">
                                                                 {{ getCartAttributes($attri)->attribute_name }}
                                                                 {{-- {{$key}} --}}
                                                             </div>
@@ -484,7 +484,7 @@
                         </div>
                         <div class="px-2">
                             <button
-                                class="block w-full max-w-xs mx-auto border border-transparent bg-[#0f577d] hover:bg-[#0f577d] focus:bg-gray-500 text-white rounded-md px-5 py-2 font-semibold">APPLY</button>
+                                class="block w-full max-w-xs mx-auto border border-transparent bg-orange-500 hover:bg-orange-500 focus:bg-gray-500 text-white rounded-md px-5 py-2 font-semibold">APPLY</button>
                         </div>
                     </div>
                 </div> --}}
@@ -552,7 +552,7 @@
 
                 <div class="py-5">
                     <button
-                        class="block  bg-[#0f577d] hover:bg-[#0f577d] focus:bg-indigo-700 text-white rounded-lg px-3 py-2 font-semibold"><i
+                        class="block  bg-orange-500 hover:bg-orange-500 focus:bg-indigo-700 text-white rounded-lg px-3 py-2 font-semibold"><i
                             class="mdi mdi-lock-outline mr-1"></i> PAY NOW
                     </button>
                 </div>

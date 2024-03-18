@@ -209,7 +209,7 @@
                         </div>
                         <div>
                             <button
-                                class="border mt-9 border-[#0f577d] px-4 py-1 rounded-md mr-2 text-[#0f577d] bg-white hover:bg-[#0f577d] hover:text-white">
+                                class="border mt-9 border-[#0f577d] px-4 py-1 rounded-md mr-2 text-[#000] bg-white hover:bg-orange-500 hover:text-white">
                                 Add
                             </button>
                         </div>

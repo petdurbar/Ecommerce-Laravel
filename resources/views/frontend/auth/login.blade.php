@@ -46,15 +46,15 @@
                                 <span class="text-sm text-gray-700 ">Remember Me</span>
                             </div>
                             <a href="">
-                                <div class="font-medium text-[#0f577d] ">Forgot Password</div>
+                                <div class="font-medium text-[#000] ">Forgot Password</div>
                             </a>
                         </div>
                         <button
-                            class=" mt-5  rounded-md border border-[#0f577d] bg-[#0f577d] py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#0f577d] w-full focus:outline-none focus:ring active:text-blue-500">
+                            class=" mt-5  rounded-md border border-[#0f577d] bg-orange-500 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#000] w-full focus:outline-none focus:ring active:text-blue-500">
                             Login
                         </button>
                         <div class="text-gray-700 mt-5">Don't have an account ? <a href="/register"><span
-                                    class="font-medium text-[#0f577d] ">Register for free</span></a> </div>
+                                    class="font-medium text-[#000] ">Register for free</span></a> </div>
                     </form>
                 </div>
             </main>

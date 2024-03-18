@@ -56,16 +56,16 @@
                             <input type="number" class="border w-1/2 py-1 px-2 m-1">
                         </div>
                         <input id="minmax-range" type="range" min="0" max="10" value="5"
-                            class="w-full h-2 bg-[#0f577d] rounded-lg appearance-none cursor-pointer ">
+                            class="w-full h-2 bg-orange-500 rounded-lg appearance-none cursor-pointer ">
                     </div>
                     <button
-                        class="bg-[#0f577d] text-white px-5 py-1 font-medium mt-5 rounded-sm hover:bg-white hover:text-[#0f577d] border-[#0f577d] border">Filter</button>
+                        class="bg-orange-500 text-white px-5 py-1 font-medium mt-5 rounded-sm hover:bg-white hover:text-[#000] border-[#0f577d] border">Filter</button>
                 </aside> --}}
                 <div class="">
 
                     <div class="">
                         <div class="flex justify-between flex-wrap items-center  py-2">
-                            <div class="font-medium text-3xl text-[#0f577d]  ">{{ $title }}</div>
+                            <div class="font-medium text-3xl text-[#000]  ">{{ $title }}</div>
                             {{-- <div class="flex gap-1 justify-center mt-3">
                                 <div class="pt-1">Sort By :</div>
                                 <div>
@@ -82,7 +82,7 @@
                                 slideOverOpen: false
                             }" class="relative  w-auto h-auto">
                                 <button @click="slideOverOpen=true"
-                                    class="inline-flex text-[#0f577d]  z-[50] items-center justify-center h-10 px-4 py-2 text-lg font-medium transition-colors bg-white border rounded-md hover:bg-neutral-100 active:bg-white disabled:opacity-50 disabled:pointer-events-none  float-right   ">
+                                    class="inline-flex text-[#000]  z-[50] items-center justify-center h-10 px-4 py-2 text-lg font-medium transition-colors bg-white border rounded-md hover:bg-neutral-100 active:bg-white disabled:opacity-50 disabled:pointer-events-none  float-right   ">
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         class="icon icon-tabler icon-tabler-filter-search" width="24" height="24"
                                         viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -195,7 +195,7 @@
 
                                                                                 </div>
                                                                                 <button
-                                                                                    class="bg-[#0f577d] text-white px-5 py-1 font-medium mt-5 rounded-sm hover:bg-white hover:text-[#0f577d] border-[#0f577d] border">Filter</button>
+                                                                                    class="bg-orange-500 text-white px-5 py-1 font-medium mt-5 rounded-sm hover:bg-white hover:text-[#000] border-[#0f577d] border">Filter</button>
                                                                             </form>
 
                                                                             <script>
@@ -232,7 +232,7 @@
 
 
                                                                             {{-- <button
-                                                                            class="bg-[#0f577d] text-white px-5 py-1 font-medium mt-5 rounded-sm hover:bg-white hover:text-[#0f577d] border-[#0f577d] border">Filter</button> --}}
+                                                                            class="bg-orange-500 text-white px-5 py-1 font-medium mt-5 rounded-sm hover:bg-white hover:text-[#000] border-[#0f577d] border">Filter</button> --}}
                                                                         </aside>
                                                                     </div>
                                                                 </div>

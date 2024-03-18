@@ -200,12 +200,12 @@
                     </a>
                     @if (Auth::guard('softsaro__users')->user())
                         <span
-                            class="absolute top-2 right-5 m-1 h-8 w-8 items-center flex justify-center rounded-full bg-[#0f577d] px-2 text-center text-sm font-medium text-white">
+                            class="absolute top-2 right-5 m-1 h-8 w-8 items-center flex justify-center rounded-full bg-orange-500 px-2 text-center text-sm font-medium text-white">
 
                             <div x-data="{ modalOpen: false }" @keydown.escape.window="modalOpen = false"
                                 class="relative z-50 w-auto h-auto ">
                                 <button @click="modalOpen=true"
-                                    class="inline-flex bg-[#0f577d] border items-center justify-center h-10 px-4 py-2 text-sm font-medium transition-colors   rounded-md hover:bg-[#4388ad]  focus:outline-none disabled:opacity-50 disabled:pointer-events-none"><svg
+                                    class="inline-flex bg-orange-500 border items-center justify-center h-10 px-4 py-2 text-sm font-medium transition-colors   rounded-md hover:bg-[#4388ad]  focus:outline-none disabled:opacity-50 disabled:pointer-events-none"><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         class="icon icon-tabler items-center icon-tabler-share" width="24"
                                         height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -439,12 +439,12 @@
                                 {{-- @if (Auth::guard('customers')->user()) --}}
                                 {{-- <a href="{{ route('cart') }}"> --}}
 
-                                <button class="font-medium bg-[#0f577d] text-white py-2 px-3 rounded-md">ADD
+                                <button class="font-medium bg-orange-500 text-white py-2 px-3 rounded-md">ADD
                                     TO CART</button>
                             </div>
                             <div class="tooltip">
                                 <div wishlistproductId="{{ $product->id }}"
-                                    class="product-wishlist cursor-pointer flex justify-between font-medium border bg-[#0f577d] text-white py-2 px-3 rounded-md">
+                                    class="product-wishlist cursor-pointer flex justify-between font-medium border bg-orange-500 text-white py-2 px-3 rounded-md">
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         class="icon icon-tabler icon-tabler-heart-filled" width="24" height="24"
                                         viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -529,7 +529,7 @@
 
             <div class="">
                 <div class="text-xl text-[#89BA46] py-5 font-medium pb-5 flex gap-10">
-                    <div class=" cursor-pointer text-[#0f577d] " id="description">Description</div>
+                    <div class=" cursor-pointer text-[#000] " id="description">Description</div>
                 </div>
 
                 <div class="border px-5  overflow-x-scroll py-5 rounded-lg bg-white content " id="descriptionContent">
@@ -539,7 +539,7 @@
 
             </div>
             @if ($product->video)
-                <div class="text-[#0f577d] text-xl  mt-5 font-semibold">
+                <div class="text-[#000] text-xl  mt-5 font-semibold">
                     Product Video
                 </div>
                 <div class="mt-5 items-center flex justify-center">

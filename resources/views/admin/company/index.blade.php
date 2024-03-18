@@ -10,7 +10,7 @@
             {{-- add page --}}
             {{-- <div class="flex">
                 <a href='{{ route('company.create') }}'
-                    class='bg-[#0f577d] text-white h-10 p-2 text-sm flex gap-2 items-center font-main rounded-lg'>
+                    class='bg-orange-500 text-white h-10 p-2 text-sm flex gap-2 items-center font-main rounded-lg'>
                     <svg xmlns="http://www.w3.org/2000/svg" class="svgicon" height="1em" viewBox="0 0 448 512">
                         <style>
                             .svgicon {

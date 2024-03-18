@@ -127,13 +127,13 @@
 
                         <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
                             <button
-                                class="inline-block shrink-0 rounded-md border border-[#0f577d] bg-[#0f577d] px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#0f577d] focus:outline-none focus:ring active:text-blue-500 ">
+                                class="inline-block shrink-0 rounded-md border border-[#0f577d] bg-orange-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#000] focus:outline-none focus:ring active:text-blue-500 ">
                                 Create an account
                             </button>
 
                             <p class="mt-4  text-gray-500 sm:mt-0">
                                 Already have an account?
-                                <a href="/login" class="font-medium text-[#0f577d] underline">Log in</a>.
+                                <a href="/login" class="font-medium text-[#000] underline">Log in</a>.
                             </p>
                         </div>
                     </form>

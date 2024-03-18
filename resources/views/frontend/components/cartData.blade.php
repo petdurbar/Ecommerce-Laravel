@@ -1,11 +1,11 @@
 @if ($items->count())
     <div class="rounded-lg md:w-2/3">
         <div class="flex justify-between mb-6">
-            <div class=" text-center text-2xl text-[#0f577d] font-bold">
+            <div class=" text-center text-2xl text-[#000] font-bold">
                 Cart Items
             </div>
             <div
-                class=" clearall rounded-md p-1.5 overflow-hidden relative group cursor-pointer font-medium bg-[#0f577d] text-red-800 ">
+                class=" clearall rounded-md p-1.5 overflow-hidden relative group cursor-pointer font-medium bg-orange-500 text-red-800 ">
                 <span
                     class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-red-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
                 <span class="relative text-white transition duration-300 group-hover:text-white ease">Clear Cart</span>
@@ -17,7 +17,7 @@
 
             <div class="justify-between mb-6 rounded-lg bg-white py-6 pl-6 shadow-md sm:flex sm:justify-start">
                 <div singleId={{ $item->id }}
-                    class="max-sm:block hidden clearSingle float-right -mt-6  h-8 rounded-tr-lg rounded-bl-lg p-1.5 overflow-hidden relative group cursor-pointer font-medium bg-[#0f577d] text-red-800 ">
+                    class="max-sm:block hidden clearSingle float-right -mt-6  h-8 rounded-tr-lg rounded-bl-lg p-1.5 overflow-hidden relative group cursor-pointer font-medium bg-orange-500 text-red-800 ">
                     <span
                         class="absolute w-32 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-red-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
                     <span class="relative text-white transition duration-300 group-hover:text-white ease">
@@ -43,7 +43,7 @@
                         @if($item->attributes->attr)
                         <div class=" flex gap-1 ">
                             @foreach ($item->attributes->attr as $key => $attri)
-                                <div class=" border bg-[#0f577d] text-white p-1 rounded">
+                                <div class=" border bg-orange-500 text-white p-1 rounded">
                                     {{ getCartAttributes($attri)->attribute_name }}
                                     {{-- {{$key}} --}}
                                 </div>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div singleId={{ $item->id }}
-                    class="clearSingle cursor-pointer float-right pr-2 max-sm:hidden block -mt-6 rounded-tr-lg rounded-bl-lg p-1 text-white font-bold bg-[#0f577d] h-8 overflow-hidden relative group  ">
+                    class="clearSingle cursor-pointer float-right pr-2 max-sm:hidden block -mt-6 rounded-tr-lg rounded-bl-lg p-1 text-white font-bold bg-orange-500 h-8 overflow-hidden relative group  ">
                     <span
                         class="absolute w-32 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-red-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
                     <span class="relative text-white transition duration-300 group-hover:text-white ease">
@@ -109,11 +109,11 @@
             </div>
         </div>
         <a href="{{ route('checkout') }}"
-            class="mt-6  w-full block text-center rounded-md bg-[#0f577d] hover:bg-[#346a86] py-1.5 font-medium text-blue-50  ">Check
+            class="mt-6  w-full block text-center rounded-md bg-orange-500 hover:bg-[#346a86] py-1.5 font-medium text-blue-50  ">Check
             out</a>
     </div>
 @else
-    <div class=" mb-6 text-center text-[#0f577d]">
+    <div class=" mb-6 text-center text-[#000]">
         <div class="  text-2xl text-primary font-bold">
             Cart Items
         </div>

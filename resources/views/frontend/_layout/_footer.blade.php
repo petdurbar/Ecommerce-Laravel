@@ -5,8 +5,8 @@
                     alt="logo" class="w-24 "></a>
             <div class=" text-gray-500 py-3">"Pet Durbar!"</div>
             <div class="flex gap-5 max-sm:justify-center">
-                <i class="fa-brands fa-facebook text-2xl text-[#0f577d]"></i>
-                <i class="fa-brands fa-instagram text-2xl text-[#0f577d]"></i>
+                <i class="fa-brands fa-facebook text-2xl text-[#000]"></i>
+                <i class="fa-brands fa-instagram text-2xl text-[#000]"></i>
 
             </div>
         </div>

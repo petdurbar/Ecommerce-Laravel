@@ -64,7 +64,7 @@
                 class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md focus:outline-none ">Search</button>
         </div>
 
-        <div class="flex items-center space-x-5 text-[#0f577d]">
+        <div class="flex items-center space-x-5 text-[#000]">
             <a class="hover:text-slate-500" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">

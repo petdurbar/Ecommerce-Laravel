@@ -2,7 +2,7 @@
     <div class="flex justify-between flex-wrap mb-4">
         <h2 class="text-2xl font-semibold ">{{ $title }}</h2>
         <a href="{{route("latestproduct")}}"
-            class="bg-[#0f577d] text-white px-4 mb-5 py-2 rounded-md hover:bg-[#346a86] focus:outline-none">
+            class="bg-orange-500 text-white px-4 mb-5 py-2 rounded-md hover:bg-[#346a86] focus:outline-none">
             View More
         </a>
     </div>

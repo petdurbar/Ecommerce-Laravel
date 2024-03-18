@@ -61,7 +61,7 @@
                                                         </label>
                                                     </div>
 
-                                                    <button class="bg-[#0f577d] text-white px-4 py-2 rounded">Save</button>
+                                                    <button class="bg-orange-500 text-white px-4 py-2 rounded">Save</button>
                                                 </form>
                                             </div>
                                         </div>

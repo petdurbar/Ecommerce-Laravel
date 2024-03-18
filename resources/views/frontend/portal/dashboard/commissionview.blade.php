@@ -5,7 +5,7 @@
         <div class="flex items-center gap-2">
             <a href="{{route("payment.history")}}">
                 <div
-                    class="border border-[#0f577d] hover:bg-white hover:text-[#0f577d] rounded-full p-1 bg-[#0f577d] text-white ">
+                    class="border border-[#0f577d] hover:bg-white hover:text-[#000] rounded-full p-1 bg-orange-500 text-white ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="17"
                         height="17" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
@@ -16,7 +16,7 @@
                     </svg>
                 </div>
             </a>
-            <h1 class="text-2xl font-semibold text-[#0f577d] mb-2">Details </h1>
+            <h1 class="text-2xl font-semibold text-[#000] mb-2">Details </h1>
         </div>
 
         <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">

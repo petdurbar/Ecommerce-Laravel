@@ -1,7 +1,7 @@
 @extends('admin._layouts.master')
 
 @section('page_title', 'Product')
-@section('product_select', 'bg-[#0f577d] text-white')
+@section('product_select', 'bg-orange-500 text-white')
 @section('body')
     <div class="px-5 bg-background w-full">
         @include('admin.message.index')
@@ -10,7 +10,7 @@
             <div class="text-2xl font-bold">Products</div>
             <div class="flex">
                 <a href='{{ route('product.create') }}'
-                    class='bg-[#0f577d] text-white h-10 p-2 text-sm flex gap-2 items-center font-main rounded-lg'>
+                    class='bg-orange-500 text-white h-10 p-2 text-sm flex gap-2 items-center font-main rounded-lg'>
                     <svg xmlns="http://www.w3.org/2000/svg" class="svgicon" height="1em" viewBox="0 0 448 512">
                         <style>
                             .svgicon {
@@ -102,7 +102,7 @@
                                         <a
                                             href="{{ route('product.show', $product->id) }}
                                         ">
-                                            <div class=" bg-[#0f577d] py-1 px-2 mx-2 text-white flex rounded-md">
+                                            <div class=" bg-orange-500 py-1 px-2 mx-2 text-white flex rounded-md">
                                                 <span class="material-symbols-outlined">
                                                     preview
                                                 </span>

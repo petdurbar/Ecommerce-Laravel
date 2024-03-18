@@ -11,7 +11,7 @@
 
                 <p class="mb-2 text-lg font-bold">Attribute Groups</p>
                 <a href="{{ route('attributegroups.create') }}"
-                    class="bg-[#0f577d] text-white h-10 p-2 text-sm flex gap-2 items-center font-main rounded-lg">
+                    class="bg-orange-500 text-white h-10 p-2 text-sm flex gap-2 items-center font-main rounded-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus pt-1 " width="20"
                         height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
