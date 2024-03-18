@@ -379,7 +379,7 @@
                                 <button class="font-medium bg-orange-500 text-white py-2 px-3 rounded-md">ADD
                                     TO CART</button>
                             </div>
-                            <div class="tooltip  gap-3 pt-5">
+                            <div class="tooltip  gap-3 ">
                                 <div wishlistproductId="{{ $product->id }}"
                                     class="product-wishlist cursor-pointer flex justify-between font-medium border bg-orange-500 text-white py-2 px-3 rounded-md">
                                     <svg xmlns="http://www.w3.org/2000/svg"
