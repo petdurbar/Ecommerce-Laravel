@@ -65,46 +65,6 @@
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-{{-- <style>
-    li>ul {
-        transform: translatex(100%) scale(0);
-    }
-
-    ul {
-        height: 70vh;
-        z-index: 999999;
-    }
-
-    li:hover>ul {
-        transform: translatex(100%) scale(1);
-    }
-
-    .group:hover>ul {
-        transform-origin: top right;
-        transform: translatex(100%) scale(1);
-    }
-
-    .swiper-pagination-bullet {
-        width: 10px !important;
-        height: 2px !important;
-        background-color: #ffffff !important;
-        opacity: 0.5 !important;
-        transition: opacity 0.3s !important;
-    }
-
-    .swiper-pagination-bullet-active {
-        opacity: 1 !important;
-    }
-
-    .slider {
-        overflow: hidden;
-    }
-
-    .swiper-wrapper {
-        transition-timing-function: ease-in-out;
-    }
-</style> --}}
-
 <style>
     iframe {
         height: 300px;
@@ -181,15 +141,9 @@
     }
 </style>
 @section('body')
-    {{-- @include('frontend._layout.menunav') --}}
-
-    {{-- @include('frontend.singlepage.singlepage',["product"=>$product,"productImage"=>$productImage]) --}}
-
-
     <div class="mx-auto max-w-screen-2xl">
         @include('admin.message.index')
         <div class="container">
-            {{-- @include('frontend.layouts.menunav') --}}
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 ">
                 <div class="p-4 bg-white shadow relative">
                     <a id="gallarylink" href="{{ asset('uploads/' . $product->featured_image) }}" data-fancybox="gallery"
@@ -294,10 +248,6 @@
                                             <img class="thumbnail aspect-square"
                                                 src="{{ asset('uploads/' . $img->images) }}">
                                         </a>
-                                        {{-- <a href="{{ asset('images/investlogo.png') }}" data-fancybox="gallery" data-rotation="0"
-                                    target="_blank">
-                                    <img class="thumbnail aspect-square" src="{{ asset('images/investlogo.png') }}">
-                                </a> --}}
                                     @endforeach
                                 </div>
 
@@ -338,11 +288,8 @@
                                                 $attributegroup->attribute_group_id,
                                                 $product->id,
                                             );
-                                            // dd($attributes);
                                         @endphp
-
                                         <div class="flex flex-wrap gap-4">
-
                                             @foreach ($attributes as $key => $attributeitem)
                                                 @php
                                                     $attr[$attributegroup->attribute_group_id] = $attributes[0]->id;
@@ -387,7 +334,6 @@
 
                                         </div>
                                     @endforeach
-
                                     <input type="hidden" id="myInput" name="myattributes" value="" />
                                     @php
                                         $jsonString = json_encode($attr);
@@ -401,21 +347,13 @@
                                         function selectAtrribute(e) {
                                             atr[e.name] = e.value;
                                             inputElement.value = JSON.stringify(atr);
-
                                             console.log(atr);
-                                            // console.log(atr['hello'])
                                             console.log(e.value);
                                         }
                                     </script>
-
-
-
                                 </div>
                             </div>
                         @endif
-
-
-
                         <div class="flex flex-wrap  gap-2 items-center">
                             <div class="flex flex-wrap gap-3">
                                 <div class="flex border justify-center items-center font-medium rounded-md">
@@ -459,23 +397,10 @@
                             </div>
                         </div>
                     </form>
-
-
-
-
-
-
-
                     <div class="py-4">Total: <span id="totalQuantity">1</span> Quantity of MRP: <span
                             id="totalPrice">{{ $product->product_price }}</span></div>
-                    {{-- @endif --}}
                 </div>
             </div>
-
-
-
-
-
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
             <script type="text/javascript">
                 $(document).ready(function() {
@@ -522,10 +447,6 @@
                     alltotalPriceElement.value = parseInt(quantityCounter) * parseInt(PriceElement);
                 }
             </script>
-
-
-
-
             <div class="">
                 <div class="text-xl text-[#89BA46] py-5 font-medium pb-5 flex gap-10">
                     <div class=" cursor-pointer text-[#000] " id="description">Description</div>
@@ -549,12 +470,6 @@
                 </div>
             @endif
         </div>
-
-    </div>
-
-
-    <div class="">
-        {{-- <x-product-section categorytitle="Related products" /> --}}
     </div>
     <script type="text/javascript">
         let thumbnails = document.getElementsByClassName('thumbnail')
@@ -614,26 +529,6 @@
             });
         });
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-    {{-- <div class="">
-    <x-singlepage
-    productname="Apple"
-    price="250"
-    singleProduct->featured_image="apple.jpg"
-
-    />
-</div> --}}
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
@@ -655,7 +550,4 @@
 
         });
     </script>
-
-    {{-- @include('frontend.singlepage.singlepage', ["singleProduct"=>$singleProduct]) --}}
-
 @endsection
