@@ -29,7 +29,7 @@ Route::get('/', [HomeController::class, 'index'])->name('homepage');
 
 Route::get('/login', [FrontendAuthController::class, 'loginpage'])->name('login');
 
-Route::post('/logout', [FrontendAuthController::class,'logout'])->name('front.logout');
+Route::post('/logout', [FrontendAuthController::class, 'logout'])->name('front.logout');
 
 Route::post('/login', [FrontendAuthController::class, 'login'])->name('user.login');
 
@@ -48,7 +48,7 @@ Route::get('/product/{product:slug}', [HomeController::class, 'singlepage'])->na
 Route::get('cart', [CartController::class, 'cart'])->name('cart');
 
 Route::get('/migrate', function () {
-    Artisan::call('migrate:fresh --seed');
+    Artisan::call('migrate');
     return redirect()->route("homepage")->with('success', 'Migrate Successfull');
 });
 // Route::get('cart/count', [HomeController::class, 'cartcount'])->name('cartcount');

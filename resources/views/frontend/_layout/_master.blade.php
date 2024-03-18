@@ -39,8 +39,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="{{ asset('uploads/favicon.ico') }}">
-    {{-- <title>Investfornepal</title> --}}
-    {{-- toastr --}}
     <style>
         .mylist ol li {
             display: block;
