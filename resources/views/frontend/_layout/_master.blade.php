@@ -29,7 +29,7 @@
         <meta property="twitter:image"
             content="{{ 'https://investfornepal.com/public/uploads/' . $meta->featured_image }}">
         <title>
-            {{ $meta->title . ' | InvestForNepal' }}
+            {{ $meta->title . ' | PetDurbar' }}
         </title>
     @endif
 
