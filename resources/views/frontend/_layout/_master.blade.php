@@ -298,7 +298,7 @@
 
         </div>
         <div class="">
-            <div class="main-body max-sm:mx-5 mx-20 my-10">
+            <div class="main-body  mb-10">
                 @yield('body')
             </div>
         </div>
