@@ -63,8 +63,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 {{-- <style>
     li>ul {
@@ -335,7 +334,10 @@
                                     @foreach ($attributeItems as $attributegroup)
                                         {{ $attributegroup->attribute_group_name }}
                                         @php
-                                            $attributes = showAttributes($attributegroup->attribute_group_id, $product->id);
+                                            $attributes = showAttributes(
+                                                $attributegroup->attribute_group_id,
+                                                $product->id,
+                                            );
                                             // dd($attributes);
                                         @endphp
 
@@ -350,9 +352,8 @@
                                                         <input type="radio" onclick="selectAtrribute(this)"
                                                             id="{{ $attributeitem->attribute_name }}"
                                                             name="{{ $attributegroup->attribute_group_id }}"
-                                                            value="{{ $attributeitem->id }}"
-                                                            class="hidden peer " required
-                                                            @if ($key === 0) checked @endif />
+                                                            value="{{ $attributeitem->id }}" class="hidden peer "
+                                                            required @if ($key === 0) checked @endif />
                                                         <label for="{{ $attributeitem->attribute_name }}"
                                                             class="inline-flex items-center justify-between w-full p-1 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer peer-checked:border-black peer-checked:text-black hover:text-gray-600 hover-bg-gray-100">
                                                             <div class="block rounded-full">
@@ -367,8 +368,8 @@
                                                         <input type="radio" id="{{ $attributeitem->attribute_name }}"
                                                             onclick="selectAtrribute(this)"
                                                             name="{{ $attributegroup->attribute_group_id }}"
-                                                            value="{{ $attributeitem->id }}"
-                                                            {{-- value="{{ $attributeitem->id }}" --}} class="hidden peer " required
+                                                            value="{{ $attributeitem->id }}" {{-- value="{{ $attributeitem->id }}" --}}
+                                                            class="hidden peer " required
                                                             @if ($key === 0) checked @endif />
 
 
@@ -416,9 +417,7 @@
 
 
                         <div class="flex flex-wrap  gap-2 items-center">
-
-
-                            <div class="flex flex-wrap gap-3 pt-5">
+                            <div class="flex flex-wrap gap-3">
                                 <div class="flex border justify-center items-center font-medium rounded-md">
                                     <span
                                         class="text-center pt-2 border-r w-8 h-full cursor-pointer hover:bg-[#529aca] hover:text-white focus:outline-none"
@@ -442,7 +441,7 @@
                                 <button class="font-medium bg-orange-500 text-white py-2 px-3 rounded-md">ADD
                                     TO CART</button>
                             </div>
-                            <div class="tooltip">
+                            <div class="tooltip  gap-3 pt-5">
                                 <div wishlistproductId="{{ $product->id }}"
                                     class="product-wishlist cursor-pointer flex justify-between font-medium border bg-orange-500 text-white py-2 px-3 rounded-md">
                                     <svg xmlns="http://www.w3.org/2000/svg"

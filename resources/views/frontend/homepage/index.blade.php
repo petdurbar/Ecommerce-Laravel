@@ -13,7 +13,12 @@
             ])
             @include('frontend.homepage.newarrivals', ['title' => 'New Arrivals', 'products' => $products])
             @include('frontend.homepage.popular', ['title' => 'Popular Sales', 'products' => $products])
-            @include('frontend.homepage.blogsection', ['title' => 'Blogs', 'blogs' => $blogs])
+            @if ($blogs->count())
+                @include('frontend.homepage.blogsection', ['title' => 'Blogs', 'blogs' => $blogs])
+            @else
+                <p>
+                </p>
+            @endif
         </section>
     </div>
 @endsection
