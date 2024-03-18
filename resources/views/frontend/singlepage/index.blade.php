@@ -362,11 +362,8 @@
                                         onclick="decrementQuantity()">-</span>
                                     <div class="border-r flex justify-center items-center h-full w-9 quantity-counter">1
                                     </div>
-
                                     <input type="hidden" value="{{ $product->id }}" name="product_id" />
                                     <input type="hidden" value="1" name="quantity" id="quantity" />
-
-
                                     <span
                                         class="text-center pt-2 border-l w-8 h-full cursor-pointer hover:bg-[#529aca] hover:text-white focus:outline-none"
                                         onclick="incrementQuantity()">+</span>

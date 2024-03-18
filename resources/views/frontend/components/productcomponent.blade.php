@@ -1,12 +1,11 @@
-<div class=" ">
-    <div class="p-4 bg-white rounded group">
+<div class="">
+    <div class="p-4 bg-white rounded">
         <div class="block mb-2 ">
             <div class="relative overflow-hidden">
                 <div class="mb-5 overflow-hidden border-b">
                     <img class="object-contain w-full mx-auto rounded aspect-video h-40"
                         src="{{ asset('uploads/' . $product->featured_image) }}" alt="{{ $product->product_name }}">
                 </div>
-
             </div>
             <div>
                 <h3 class="mb-2 text-lg font-bold text-[#000]">
@@ -59,7 +58,7 @@
                 @else
                     <div wishlistproductId="{{ $product->id }}" class="product-wishlist flex items-center ">
                         <div
-                            class="relative border flex items-center justify-center p-3 mb-3 bg-white rounded wishlist">
+                            class="relative border flex items-center justify-center p-3 mb-3 bg-white hover:bg-red-200 rounded wishlist">
                             <div class="wishlist-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                     fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
@@ -71,10 +70,9 @@
                     </div>
                 @endif
             </div>
-
             <div productId="{{ $product->id }}" class="cart-link alert-button w-[65%]">
                 <div
-                    class="relative border flex items-center p-3 mb-3 text-white justify-between bg-orange-500 rounded wishlist">
+                    class="relative border flex items-center p-3 mb-3 text-white justify-between hover:bg-orange-600 bg-orange-500 rounded wishlist">
                     <div class="">
                         Add to Cart
                     </div>
