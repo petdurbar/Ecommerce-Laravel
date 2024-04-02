@@ -176,9 +176,7 @@
                     window.location.href = `/product/${productSlug}`; // Update the URL structure
                 }
             });
-            // Use mousedown event on document to detect clicks outside the input and the dropdown
             $(document).on('mousedown', function(event) {
-                // Check if the click target is not the search input or the results list
                 if (!searchInput.is(event.target) && !resultsList.is(event.target) && resultsList.has(event
                         .target).length === 0) {
                     resultsList.hide();

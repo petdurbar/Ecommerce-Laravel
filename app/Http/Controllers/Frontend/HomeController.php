@@ -86,7 +86,7 @@ class HomeController extends Controller
         $blog->views++;
         $blog->save();
         $slug = $blog->slug;
-        return view("frontend.blogs.singlepage", compact('blog', 'slug', 'allblogs','currentUserLocation'));
+        return view("frontend.blogs.singlepage", compact('blog', 'slug', 'allblogs', 'currentUserLocation'));
     }
 
     public function singlepage(Request $request, Softsaro_Product $product)
@@ -208,25 +208,27 @@ class HomeController extends Controller
 
     public function checkoutpay(Request $request)
     {
-        // dd($request);
+        $sumprice = \Cart::getSubTotal();
+        $totalamount = $sumprice + $request->delivery_charge_;
 
-        if ($request->payment == "cash-on-delivery") {
-            $paymentmethod = "Cash-on-delivery";
+        if ($request->order_from == "valleyout") {
+            if ($request->paymentmethod == "Cash-On-Delivery") {
+
+                return back()->with("poperror", "Currently Cash ON Delivery Not Availabel Outside Valley.");
+            }
         }
 
-        if ($request->payment == "online-payment") {
-            $validated = $request->validate([
-                'paymethod' => 'required',
-            ]);
-            $paymentmethod = $request->paymethod;
-        }
         $items = \Cart::getContent();
+        if ($items->isEmpty()) {
+            return redirect()->back()->with('error', 'Your cart is Empty');
+        }
+        if ($totalamount != $request->alltotalamount) {
+            abort(404);
+        }
         // $sumprice = \Cart::getSubTotal();
 
         $ordernum = $this->orderExists(8);
         $orderid = "order_" . $ordernum;
-        // dd($request);
-        // dd($sum);
         if (Auth::guard('softsaro__users')->user()) {
             $userid = Auth::guard('softsaro__users')->user()->id;
         } else {
@@ -236,13 +238,14 @@ class HomeController extends Controller
             'user_id' => $userid,
             'order_id' => $orderid,
             'items' => $items->count(),
-            'amount' => $request->alltotalamount,
-            'payment_method' => $paymentmethod,
+            'amount' => $totalamount,
+            'payment_method' => $request->paymentmethod,
+            'payment_status' => "PENDING",
             'order_status' => "PROCESSING",
-            'delivery_charge' => $request->delivery,
+            'view_status' => 0,
+            'order_from' => $request->order_from,
+            'delivery_charge' => $request->delivery_charge_,
         ]);
-        $incentive_commission = [];
-        $affilate_commission = [];
 
         foreach ($items as $item) {
             $product = Softsaro_Product::where("id", $item->id)->first();
@@ -251,7 +254,7 @@ class HomeController extends Controller
             $incentive_commission[] = $product->incentive_commission_amount * $item->quantity;
             $affilate_commission[] = $product->affiliate_commission_amount * $item->quantity;
 
-            Softsaro_OrderItems::create([
+            $orderitem = Softsaro_OrderItems::create([
                 'order_id' => $ordertable->id,
                 'product_id' => $product->id,
                 'quantity' => $item->quantity,
@@ -261,69 +264,65 @@ class HomeController extends Controller
             ]);
         }
 
-        $totalIncentiveCommission = array_sum($incentive_commission);
-        $totalAffiliateCommission = array_sum($affilate_commission);
 
-        Softsaro_BillingInfo::create([
-            'order_id' => $ordertable->id,
-            'billing_name' => $request->billing_name,
-            'billing_email' => $request->billing_email,
-            'billing_address' => $request->billing_address,
-            'billing_phonenumber' => $request->billing_phonenumber,
 
-            'shipping_name' => $request->shipping_name ?? $request->billing_name,
-            'shipping_email' => $request->shipping_email ?? $request->billing_email,
-            'shipping_address' => $request->shipping_address ?? $request->billing_address,
-            'shipping_phonenumber' => $request->shipping_phonenumber ?? $request->billing_phonenumber,
-        ]);
 
-        $cookieValue = request()->cookie('scifn');
-        if ($cookieValue) {
-            $user = Softsaro_User::where("affilate_id", $cookieValue)->first();
-            Softsaro_Commission::create([
-                'order_id' => $ordertable->id,
-                'user_id' => $user->id,
-                'incentive_commission' => $totalIncentiveCommission,
-                'affilate_commission' => $totalAffiliateCommission,
-            ]);
-
-            $user->total_earning += $totalIncentiveCommission;
-            $user->pending_amount += $totalAffiliateCommission;
-            $user->save();
+        if ($request->paymentmethod == "Cash-On-Delivery") {
+            \Cart::clear();
         }
+        if ($request->paymethod == "Khalti") {
+            $amount = $totalamount;
+            $customer_name = $request->billing_name;
+            $customer_email = $request->billing_email;
+            $customer_phone = $request->billing_phonenumber;
 
-        // dd("completed", $totalCommission);
-        \Cart::clear();
-        return redirect()->route('thanks')->with('success', 'Order Successfully Placed');
+            $configs = [
+                "return_url" => route("thanks", $ordertable->order_id),
+                "website_url" => "http://127.0.0.1:8000/",
+                "amount" =>  10 * 100,
+                // "amount" =>  $amount * 100,
+                "purchase_order_id" => $ordertable->order_id,
+                "purchase_order_name" => $ordertable->order_id,
+                "customer_info" => [
+                    "name" => $customer_name,
+                    "email" => $customer_email,
+                    "phone" => $customer_phone
+                ]
+            ];
+            $json_configs = json_encode($configs);
+            $curl = curl_init();
+            curl_setopt_array(
+                $curl,
+                array(
+                    CURLOPT_URL => 'https://khalti.com/api/v2/epayment/initiate/',
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => '',
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 0,
+                    CURLOPT_FOLLOWLOCATION => true,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => 'POST',
+                    CURLOPT_POSTFIELDS => $json_configs,
+                    CURLOPT_HTTPHEADER => array(
+                        'Authorization: Key live_secret_key_ab40f549e6e0435a906acc45a8c3fde9',
+                        'Content-Type: application/json',
+                    ),
+                )
+            );
+            $response = curl_exec($curl);
 
+            curl_close($curl);
+            dd($response, $curl);
 
-        // $prices = [];
-        // $cookieValue = request()->cookie('scifn');
-        // if ($cookieValue) {
-        //     $user = Softsaro_User::where("affilate_id", $cookieValue)->first();
-        //     foreach ($items as $item) {
-        //         $product = Softsaro_Product::where("id", $item->id)->first();
-
-
-        //         $commission = $product->commission * $item->quantity;
-        //         $prices[] = $product->commission * $item->quantity;
-
-        //         Softsaro_Commission::create([
-        //             'user_id' => $user->id,
-        //             'product_id' => $item->id,
-        //             'quantity' => $item->quantity,
-        //             'user_commision' => $commission,
-        //         ]);
-        //     }
-        //     $totalCommission = array_sum($prices);
-
-        //     dd($totalCommission);
-        // }
+            if ($response == true) {
+                $data = json_decode($response);
+                return redirect($data->payment_url);
+            }
+        }
     }
 
     public function affilateform()
     {
-
         $userinfo = Auth::guard('softsaro__users')->user();
         // dd($user);
         return view("frontend.affilate.affilateform", compact("userinfo"));

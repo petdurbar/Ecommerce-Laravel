@@ -268,14 +268,6 @@
 
                                     </div>
                                 </div>
-
-
-
-
-
-
-
-
                                 <div class="flex w-full gap-2 text-sm">
                                     <div>
                                         <input type="radio" id="online-payment" name="payment" value="online-payment"
@@ -439,16 +431,16 @@
                                                         value="{{ $item->quantity }}" disabled />
                                                 </span>
                                                 <div class="mt-5 sm:mt-0 text-xs">
-                                                   
-                                                    @if($item->attributes->attr)
-                                                    <div class=" flex gap-1 ">
-                                                        @foreach ($item->attributes->attr as $key => $attri)
-                                                            <div class=" border bg-orange-500 text-white p-1 rounded">
-                                                                {{ getCartAttributes($attri)->attribute_name }}
-                                                                {{-- {{$key}} --}}
-                                                            </div>
-                                                        @endforeach
-                                                    </div>
+
+                                                    @if ($item->attributes->attr)
+                                                        <div class=" flex gap-1 ">
+                                                            @foreach ($item->attributes->attr as $key => $attri)
+                                                                <div class=" border bg-orange-500 text-white p-1 rounded">
+                                                                    {{ getCartAttributes($attri)->attribute_name }}
+                                                                    {{-- {{$key}} --}}
+                                                                </div>
+                                                            @endforeach
+                                                        </div>
                                                     @endif
                                                 </div>
                                             </div>
@@ -667,7 +659,6 @@
             $(".image-radio input[type='radio']").change(function() {
                 // Remove 'selected' class from all images
                 $(".image-radio img").removeClass("selected");
-
                 // Add 'selected' class to the clicked image
                 $(this).closest(".image-radio").find("img").addClass("selected");
             });
