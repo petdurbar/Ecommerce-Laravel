@@ -304,7 +304,7 @@ class HomeController extends Controller
                     CURLOPT_CUSTOMREQUEST => 'POST',
                     CURLOPT_POSTFIELDS => $json_configs,
                     CURLOPT_HTTPHEADER => array(
-                        'Authorization: Key live_secret_key_ab40f549e6e0435a906acc45a8c3fde9',
+                        // 'Authorization: Key live_secret_key_ab40f549e6e0435a906acc45a8c3fde9',
                         'Content-Type: application/json',
                     ),
                 )
@@ -312,7 +312,6 @@ class HomeController extends Controller
             $response = curl_exec($curl);
 
             curl_close($curl);
-            dd($response, $curl);
 
             if ($response == true) {
                 $data = json_decode($response);
