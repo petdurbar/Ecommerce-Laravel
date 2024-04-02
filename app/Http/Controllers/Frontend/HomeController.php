@@ -294,7 +294,7 @@ class HomeController extends Controller
             curl_setopt_array(
                 $curl,
                 array(
-                    CURLOPT_URL => 'https://khalti.com/api/v2/epayment/initiate/',
+                    CURLOPT_URL => 'https://a.khalti.com/api/v2/epayment/initiate/',
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_ENCODING => '',
                     CURLOPT_MAXREDIRS => 10,
@@ -304,15 +304,14 @@ class HomeController extends Controller
                     CURLOPT_CUSTOMREQUEST => 'POST',
                     CURLOPT_POSTFIELDS => $json_configs,
                     CURLOPT_HTTPHEADER => array(
-                        // 'Authorization: Key live_secret_key_ab40f549e6e0435a906acc45a8c3fde9',
+                        'Authorization: Key live_secret_key_68791341fdd94846a146f0457ff7b455',
                         'Content-Type: application/json',
                     ),
+                    CURLOPT_SSL_VERIFYPEER => false,
                 )
             );
             $response = curl_exec($curl);
-
             curl_close($curl);
-
             if ($response == true) {
                 $data = json_decode($response);
                 return redirect($data->payment_url);
